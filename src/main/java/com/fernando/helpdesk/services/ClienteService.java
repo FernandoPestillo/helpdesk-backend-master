@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import com.fernando.helpdesk.repositories.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,6 @@ import com.fernando.helpdesk.domain.Cliente;
 import com.fernando.helpdesk.domain.Pessoa;
 import com.fernando.helpdesk.domain.dtos.ClienteDTO;
 import com.fernando.helpdesk.repositories.ClienteRepository;
-import com.fernando.helpdesk.repositories.PessoaRepository;
 import com.fernando.helpdesk.services.exceptions.DataIntegrityViolationException;
 import com.fernando.helpdesk.services.exceptions.ObjectnotFoundException;
 

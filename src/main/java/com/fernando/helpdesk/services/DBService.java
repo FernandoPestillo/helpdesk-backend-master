@@ -2,6 +2,9 @@ package com.fernando.helpdesk.services;
 
 import java.util.Arrays;
 
+import com.fernando.helpdesk.domain.Produto;
+import com.fernando.helpdesk.domain.enums.Categoria;
+import com.fernando.helpdesk.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -15,6 +18,7 @@ import com.fernando.helpdesk.domain.enums.Status;
 import com.fernando.helpdesk.repositories.ChamadoRepository;
 import com.fernando.helpdesk.repositories.PessoaRepository;
 
+
 @Service
 public class DBService {
 
@@ -22,6 +26,8 @@ public class DBService {
 	private ChamadoRepository chamadoRepository;
 	@Autowired
 	private PessoaRepository pessoaRepository;
+	@Autowired
+	private ProdutoRepository produtoRepository;
 	@Autowired
 	private BCryptPasswordEncoder encoder;
 
@@ -56,7 +62,13 @@ public class DBService {
 		Chamado c6 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Chamado 7", "Teste chamado 6", tec1, cli5);
 		Chamado c7 = new Chamado(null, Prioridade.ALTA, Status.ENCERRADO, "Achar o DAVI", "DAVI ESTA FORA DO AR", tec1, cli6);
 
+		Produto p1 = new Produto(null, "Celta", "celta.png", Categoria.AUTOMOVEIS);
+		Produto p2 = new Produto(null, "Cimento", "cimento.png", Categoria.ALIMENTOS);
+		Produto p3 = new Produto(null, "Rtx 8020 Chinese Democracy", "rtx.png", Categoria.INFORMATICA);
+
+
 		pessoaRepository.saveAll(Arrays.asList(tec1, tec2, tec3, tec4, tec5, tec6, tec7, cli1, cli2, cli3, cli4, cli5, cli6));
 		chamadoRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6, c7));
+		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 	}
 }
