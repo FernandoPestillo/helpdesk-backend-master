@@ -39,8 +39,8 @@ public class DBService {
 //		Tecnico tec3 = new Tecnico(null, "Claude Elwood Shannon", "271.068.470-54", "shannon@mail.com", encoder.encode("123"));
 //		Tecnico tec4 = new Tecnico(null, "Tim Berners-Lee", "162.720.120-39", "lee@mail.com", encoder.encode("123"));
 //		Tecnico tec5 = new Tecnico(null, "Linus Torvalds", "778.556.170-27", "linus@mail.com", encoder.encode("123"));
-		Tecnico tec6 = new Tecnico(null, "ADMIN", "754.279.402-78", "admin@mail.com", encoder.encode("123"));
-		tec6.addPerfil(Perfil.ADMIN);
+//		Tecnico tec6 = new Tecnico(null, "ADMIN", "754.279.402-78", "admin@mail.com", encoder.encode("123"));
+//		tec6.addPerfil(Perfil.ADMIN);
 //		Tecnico tec7 = new Tecnico(null, "Davi Demarqui", "973.486.996-50", "davi@oficinaMecanica.uol", encoder.encode("123"));
 //		tec7.addPerfil(Perfil.ADMIN);
 //
@@ -73,7 +73,7 @@ public class DBService {
 //				Categoria.INFORMATICA);
 //
 //
-		pessoaRepository.save(tec6);
+//		pessoaRepository.save(tec6);
 //		chamadoRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6, c7));
 //		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 	}
