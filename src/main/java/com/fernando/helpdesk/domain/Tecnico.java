@@ -6,12 +6,14 @@ import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fernando.helpdesk.domain.dtos.TecnicoDTO;
 import com.fernando.helpdesk.domain.enums.Perfil;
 
 @Entity
+@Table(name = "tecnico")
 public class Tecnico extends Pessoa {
 	private static final long serialVersionUID = 1L;
 

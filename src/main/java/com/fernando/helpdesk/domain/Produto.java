@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
+@Table(name = "produto")
 public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -22,6 +23,7 @@ public class Produto implements Serializable {
 	private String nome;
 	private String foto;
 
+	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
 
 
@@ -44,6 +46,7 @@ public class Produto implements Serializable {
 		this.id = obj.getId();
 		this.nome = obj.getNome();
 		this.foto = obj.getFoto();
+		this.categoria = obj.getCategoria();
 		this.dataCriacao = obj.getDataCriacao();
 	}
 

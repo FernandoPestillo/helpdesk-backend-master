@@ -8,14 +8,15 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Categoria {
 
-	ALIMENTOS(0, "ALIMENTOS"),
-	INFORMATICA(1, "INFORMATICA"),
-	ELETRODOMESTICO(2, "ELETRODOMESTICO"),
-	MOVEIS(3, "MOVEIS"),
-	ENTRETENIMENTO(4, "ENTRETENIMENTO"),
-	AUTOMOVEIS(5, "AUTOMOVEIS");
+	ALIMENTOS("alimentos"),
+	INFORMATICA("informática"),
+	ELETRODOMESTICO("eletrodomésticos"),
+	MOVEIS("móveis"),
+	ENTRETENIMENTO("entretenimento"),
+	AUTOMOVEIS( "automóveis");
 
-	private  final Integer codigo;
+
 	private final String descricao;
+
 
 }

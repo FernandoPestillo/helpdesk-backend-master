@@ -18,7 +18,7 @@ public class ProdutoDTO implements Serializable {
 	private String nome;
 	private String foto;
 
-	private Integer categoria;
+	private Categoria categoria;
 
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataCriacao = LocalDate.now();
@@ -32,7 +32,7 @@ public class ProdutoDTO implements Serializable {
 		this.id = obj.getId();
 		this.nome = obj.getNome();
 		this.foto = obj.getFoto();
-		this.categoria = obj.getCategoria().getCodigo();
+		this.categoria = obj.getCategoria();
 		this.dataCriacao = obj.getDataCriacao();
 	}
 
@@ -60,11 +60,11 @@ public class ProdutoDTO implements Serializable {
 		this.foto = foto;
 	}
 
-	public Integer getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Integer categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 

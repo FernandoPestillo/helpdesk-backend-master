@@ -1,8 +1,8 @@
 package com.fernando.helpdesk.services;
 
-import com.fernando.helpdesk.domain.Cliente;
 import com.fernando.helpdesk.domain.Produto;
 import com.fernando.helpdesk.domain.dtos.ProdutoDTO;
+import com.fernando.helpdesk.domain.enums.Categoria;
 import com.fernando.helpdesk.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +28,10 @@ public class ProdutoService {
 
 	public Produto create(ProdutoDTO objDTO) {
 		objDTO.setId(null);
+
 		Produto newObj = new Produto(objDTO);
+
+
 		return repository.save(newObj);
 	}
 
