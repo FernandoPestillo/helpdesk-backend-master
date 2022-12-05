@@ -73,7 +73,7 @@ public class DBService {
 				Categoria.INFORMATICA);
 
 
-		pessoaRepository.saveAll(cli1, cli2, cli3,cli4, cli5, cli6, tec1, tec2, tec3, tec4, tec5, tec6, tec7);
+		pessoaRepository.saveAll(Arrays.asList(cli1, cli2, cli3,cli4, cli5, cli6, tec1, tec2, tec3, tec4, tec5, tec6, tec7));
 		chamadoRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6, c7));
 		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 	}
